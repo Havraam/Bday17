@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management System - Liam</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #58a6ff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            border: 1px solid #30363d;
+            padding: 3rem;
+            border-radius: 8px;
+            background: #161b22;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 { font-size: 1.4rem; color: #8b949e; margin: 10px 0; }
+        .days-number {
+            font-size: 6rem;
+            color: #1f6feb;
+            margin: 25px 0;
+            font-weight: bold;
+            text-shadow: 0 0 25px rgba(31, 111, 235, 0.4);
+        }
+        .status { color: #3fb950; font-size: 0.9rem; margin: 10px 0; }
+        .error-msg { color: #f85149; font-size: 0.85rem; margin-top: 15px; }
+        .footer { font-size: 0.75rem; color: #484f58; margin-top: 30px; border-top: 1px solid #30363d; padding-top: 15px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="status">> INITIALIZING DENIAL_PROTOCOL.v20... [DONE]</div>
+    <div class="status">> BYPASSING BIOLOGICAL_CLOCK... [SUCCESS]</div>
+    
+    <h1>CURRENT STATUS: AGE 17 +</h1>
+    <div class="days-number" id="counter">0</div>
+    <h1>DAYS</h1>
+
+    <div class="error-msg">> CRITICAL ERROR: "AGE 20" NOT FOUND.</div>
+    <div class="error-msg">> REVERTING TO LAST KNOWN STABLE VERSION: 17.</div>
+
+    <div class="footer">
+        Property of: The High Council of Friendship<br>
+    </div>
+</div>
+
+<script>
+    // ENTER THE DATE OF LIAM'S 17th BIRTHDAY HERE (YYYY-MM-DD)
+    const birthday17 = new Date('2023-01-12'); 
+    
+    function updateCounter() {
+        const now = new Date();
+        const diffTime = Math.abs(now - birthday17);
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        document.getElementById('counter').innerText = diffDays;
+    }
+
+    updateCounter();
+
+    // The Secret Developer Message
+    console.log("%cHAPPY BIRTHDAY LIAM! %cYou found the Console. You'll always be 17 here.", 
+                "color: #1f6feb; font-size: 20px; font-weight: bold;", 
+                "color: #3fb950; font-size: 16px;");
+</script>
+
+</body>
+</html>
